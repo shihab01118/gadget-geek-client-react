@@ -63,7 +63,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="text-3xl md:text-4xl font-bold">
-          TECH<span className="text-[#ffb300]">NOVA</span>
+          Gadget<span className="text-[#ffb300]">Geek</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
