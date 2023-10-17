@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2020/12/Product-26-600x600.jpg",
+        "price": "$200",
+        "name": "22-Mac with Apple M1 chip"
+    },
+    {
+        "id": 2,
+        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2020/12/Rectangle-4-600x600.jpg",
+        "price": "$250",
+        "name": "A9 Gold Series 8 GPS"
+    },
+    {
+        "id": 3,
+        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2020/12/Rectangle-5-600x600.jpg",
+        "price": "$150-$200",
+        "name": "A9 Gold with Apple M1"
+    },
+    {
+        "id": 4,
+        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2018/05/Rectangle-1-600x600.jpg",
+        "price": "$150",
+        "name": "Air Cooler with A-RGB"
+    },
+    {
+        "id": 5,
+        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2020/12/Product-5-600x600.jpg",
+        "price": "$120",
+        "name": "Apple 11 iPad Pro 128GB"
+    },
+    {
+        "id": 6,
+        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/06/Rectangle-1-600x600.jpg",
+        "price": "$100",
+        "name": "Apple AirPods Pro 2021"
+    }
+]
