@@ -7,7 +7,11 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold" : "font-semibold text-gray-500"
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#ffb300] font-semibold"
+              : "font-semibold text-gray-500"
           }
         >
           Home
@@ -17,7 +21,11 @@ const Navbar = () => {
         <NavLink
           to="/add_product"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold" : "font-semibold text-gray-500"
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#ffb300] font-semibold"
+              : "font-semibold text-gray-500"
           }
         >
           Add Product
@@ -27,7 +35,11 @@ const Navbar = () => {
         <NavLink
           to="/my_cart"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold" : "font-semibold text-gray-500"
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#ffb300] font-semibold"
+              : "font-semibold text-gray-500"
           }
         >
           My Cart
@@ -36,7 +48,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar lg:container mx-auto py-6">
+    <div className="navbar lg:max-w-6xl mx-auto py-6">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -70,9 +82,11 @@ const Navbar = () => {
         <ul className="flex gap-8">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-      <Link to="/login">
-            <button className="text-xl font-semibold text-[#ffb300]">Login</button>
-          </Link>
+        <Link to="/login">
+          <button className="text-xl font-semibold text-[#ffb300]">
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );
