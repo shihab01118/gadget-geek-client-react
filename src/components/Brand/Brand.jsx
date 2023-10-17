@@ -8,7 +8,7 @@ const Brand = ({ brand }) => {
       <Link to={`/brand/${brand_name}`}>
         <div>
           <img src={image} alt={brand_name} className="rounded-full" />
-          <h3 className="text-center mt-3 md:text-lg font-bold text-[#0b0b0b] hover:text-[#ffb300] hover:underline">
+          <h3 className="text-center mt-3 md:text-lg font-bold text-[#0b0b0b] hover:text-[#ffb300]">
             {brand_name}
           </h3>
         </div>
