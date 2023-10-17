@@ -7,7 +7,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold text-lg" : "font-semibold text-lg text-gray-500"
+            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold" : "font-semibold text-gray-500"
           }
         >
           Home
@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavLink
           to="/add_product"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold text-lg" : "font-semibold text-lg text-gray-500"
+            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold" : "font-semibold text-gray-500"
           }
         >
           Add Product
@@ -27,7 +27,7 @@ const Navbar = () => {
         <NavLink
           to="/my_cart"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold text-lg" : "font-semibold text-lg text-gray-500"
+            isPending ? "pending" : isActive ? "text-[#ffb300] font-semibold" : "font-semibold text-gray-500"
           }
         >
           My Cart
