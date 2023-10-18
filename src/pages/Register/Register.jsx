@@ -1,6 +1,44 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
+  const { createUser, updateUserProfile, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    // get form value
+    const name = form.name.value;
+    const img = form.img.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    // password validation
+    // if (
+    //     !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{6,}$/.test(password)
+    //   ) {
+    //     toast.error(
+    //       "Password must contain 6 characters, one capital letter and a special character."
+    //     );
+    //     return;
+    //   }
+
+    //   create a User
+    createUser(email, password).then((result) => {
+      console.log(result.user);
+      toast.success("Registration Successful!");
+
+      // update user profile
+      updateUserProfile(name, img);
+      logOut();
+      navigate("/login");
+    });
+  };
+
   return (
     <section
       style={{
@@ -12,7 +50,7 @@ const Register = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center text-[#0B0B0B]">
           Register Here
         </h1>
-        <form className="p-8 border rounded-lg mt-4">
+        <form onSubmit={handleRegister} className="p-8 border rounded-lg mt-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="form-control">
               <label className="label">
@@ -70,10 +108,7 @@ const Register = () => {
           </div>
           <p className="mt-3 text-center text-sm antialiased">
             Already have an account?{" "}
-            <Link
-              className="text-[#ffb300] font-semibold text-lg"
-              to="/login"
-            >
+            <Link className="text-[#ffb300] font-semibold text-lg" to="/login">
               Login
             </Link>
           </p>
