@@ -1,7 +1,49 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { signInUser, googleSignIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const email = form.email.value;
+    const password = form.password.value;
+
+    // sign in user
+    signInUser(email, password)
+    .then((result) => {
+      console.log(result.user);
+      toast.success("Login Successful!");
+
+      // navigate after login
+      navigate(location?.state ? location.state : "/");
+    })
+    .catch(error => {
+        console.error(error);
+    })
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+    .then(result => {
+        console.log(result.user);
+        toast.success("Login Successful!");
+
+        // navigate after login
+      navigate(location?.state ? location.state : "/");
+    })
+    .catct(error => {
+        console.error(error);
+    })
+  }
+
   return (
     <div
       className="flex justify-center py-10 lg:py-16 bg-cover bg-center min-h-screen"
@@ -16,38 +58,38 @@ const Login = () => {
             Sign In
           </h3>
         </div>
-        <form>
-        <div className="px-6">
-        <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="input input-bordered"
-              required
-            />
+        <form onSubmit={handleLogIn}>
+          <div className="px-6">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Your Password"
+                className="input input-bordered"
+                required
+              />
+              <label className="label">
+                <a href="#" className="label-text-alt link link-hover">
+                  Forgot password?
+                </a>
+              </label>
+            </div>
           </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Your Password"
-              className="input input-bordered"
-              required
-            />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
-          </div>
-        </div>
           <div className="p-6 pt-0">
             <button
               className="block w-full select-none rounded-lg bg-[#ffb300] btn text-center align-middle font-bold capitalize text-white "
@@ -68,7 +110,7 @@ const Login = () => {
                 <div className="flex-grow border-t border-gray-400"></div>
               </div>
               <div className="grid grid-cols-2 gap-5 mt-3">
-                <button className="btn btn-outline">
+                <button onClick={handleGoogleSignIn} className="btn btn-outline">
                   <FaGoogle></FaGoogle>
                   Google
                 </button>
