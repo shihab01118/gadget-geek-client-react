@@ -42,7 +42,7 @@ const Home = () => {
           <h2 className="text-2xl leading-8 lg:text-3xl text-center mb-10 font-bold text-[#0b0b0b]">
             Top Selling Products
           </h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-3 gap-6">
             {topProducts?.map((product) => (
               <TopProduct key={product?.id} product={product}></TopProduct>
             ))}
@@ -53,7 +53,7 @@ const Home = () => {
           <h2 className="text-2xl leading-8 lg:text-3xl text-center mb-10 font-bold text-[#0b0b0b]">
           Recommended For You
           </h2>
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid lg:grid-cols-4 gap-6">
             {products?.map((product) => (
               <Product key={product?.id} product={product}></Product>
             ))}

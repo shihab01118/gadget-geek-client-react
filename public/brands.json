@@ -2,31 +2,31 @@
     {
         "id": 1,
         "brand_name": "Apple",
-        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/04/img-3.jpg"
+        "image": "https://i.ibb.co/G3j8cf3/apple-logo-82x100.png"
     },
     {
         "id": 2,
         "brand_name": "Samsung",
-        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/04/img-5.jpg"
+        "image": "https://i.ibb.co/GnvfKbt/samsung-logo-250x83.png"
     },
     {
         "id": 3,
         "brand_name": "Sony",
-        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/04/img-6.jpg"
+        "image": "https://i.ibb.co/2WR3Gwc/sony-logo-250x44.png"
     },
     {
         "id": 4,
         "brand_name": "Google",
-        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/04/img-7.jpg"
+        "image": "https://i.ibb.co/NmKbPw6/google-logo-history-png-2603.png"
     },
     {
         "id": 5,
         "brand_name": "Intel",
-        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/04/img-2.jpg"
+        "image": "https://i.ibb.co/NVvvJgR/intel-png-logo-4130.png"
     },
     {
         "id": 6,
         "brand_name": "Xiaomi",
-        "image": "https://wpbingosite.com/wordpress/arostore/wp-content/uploads/2023/04/img-1.jpg"
+        "image": "https://i.ibb.co/YhsJg3z/xiaomi-33319.png"
     }
 ]
