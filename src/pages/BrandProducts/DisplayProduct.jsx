@@ -24,7 +24,7 @@ const DisplayProduct = ({ product }) => {
           <button className="btn btn-sm mr-3 bg-[#3C393B] text-white font-semibold capitalize">
             Update
           </button>
-          <Link>
+          <Link to={`/product/${_id}`}>
             <button className="btn btn-sm bg-[#ffb300] text-white font-semibold capitalize">
               Details
             </button>
