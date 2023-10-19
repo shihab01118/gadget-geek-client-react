@@ -26,7 +26,9 @@ const PublicRoutes = createBrowserRouter([
         path: "/products/:brand",
         element: <BrandProducts />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.brand}`),
+          fetch(
+            `https://gadget-geek-server.vercel.app/products/${params.brand}`
+          ),
       },
       {
         path: "/product/details/:id",
@@ -36,7 +38,7 @@ const PublicRoutes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://gadget-geek-server.vercel.app/product/${params.id}`),
       },
       {
         path: "/product/update/:id",
@@ -46,7 +48,7 @@ const PublicRoutes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://gadget-geek-server.vercel.app/product/${params.id}`),
       },
       {
         path: "/add_product",
@@ -63,7 +65,7 @@ const PublicRoutes = createBrowserRouter([
             <MyCart />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/cart")
+        loader: () => fetch("https://gadget-geek-server.vercel.app/cart"),
       },
       {
         path: "/login",

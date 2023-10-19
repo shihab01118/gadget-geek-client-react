@@ -16,7 +16,7 @@ const AddProduct = () => {
     const product = { name, brand, type, price, img, rating, description };
     console.log(product);
 
-    fetch("http://localhost:5000/products", {
+    fetch("https://gadget-geek-server.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,10 +26,10 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.insertedId) {
-            toast.success("Successfully Added!")
+        if (data.insertedId) {
+          toast.success("Successfully Added!");
         }
-        form.reset()
+        form.reset();
       });
   };
   return (

@@ -16,14 +16,14 @@ const CartProduct = ({ product, products, setProducts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${id}`, {
+        fetch(`https://gadget-geek-server.vercel.app/cart/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-              Swal.fire({title: "Deleted!", icon:"success"});
+              Swal.fire({ title: "Deleted!", icon: "success" });
             }
             const remainingProducts = products.filter(
               (prod) => prod._id !== id

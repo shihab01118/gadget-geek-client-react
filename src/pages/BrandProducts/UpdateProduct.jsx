@@ -17,9 +17,9 @@ const UpdateProduct = () => {
     const img = form.img.value;
     const rating = form.rating.value;
 
-    const updatedProduct = { name, brand, type, price, img, rating};
+    const updatedProduct = { name, brand, type, price, img, rating };
 
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://gadget-geek-server.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
