@@ -1,12 +1,17 @@
+import { useContext } from "react";
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
+  const {user} = useContext(AuthContext);
+  const email = user.email;
+  
   const product = useLoaderData();
   const { name, brand, type, price, img, rating, description } = product || {};
 
   const handleAddToCart = () => {
-    const cartProduct = { name, img, price };
+    const cartProduct = { name, img, price, email };
     fetch("https://gadget-geek-server.vercel.app/cart", {
       method: "POST",
       headers: {

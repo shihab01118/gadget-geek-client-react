@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import CartProduct from "./CartProduct";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const MyCart = () => {
+  const { user } = useContext(AuthContext);
+
   const loadedProducts = useLoaderData();
   const [products, setProducts] = useState(loadedProducts);
+
+  useEffect(() => {
+    const filteredProducts = products.filter(
+      (prod) => prod.email === user.email
+    );
+    setProducts(filteredProducts);
+  }, []);
 
   return (
     <div>
