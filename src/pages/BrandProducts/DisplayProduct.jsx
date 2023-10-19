@@ -21,10 +21,11 @@ const DisplayProduct = ({ product }) => {
           <p>Rating: {rating}</p>
         </div>
         <div className="mt-3">
+          <Link to={`/product/update/${_id}`}>
           <button className="btn btn-sm mr-3 bg-[#3C393B] text-white font-semibold capitalize">
             Update
-          </button>
-          <Link to={`/product/${_id}`}>
+          </button></Link>
+          <Link to={`/product/details/${_id}`}>
             <button className="btn btn-sm bg-[#ffb300] text-white font-semibold capitalize">
               Details
             </button>
