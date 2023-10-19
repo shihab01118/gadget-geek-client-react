@@ -52,6 +52,7 @@ const PublicRoutes = createBrowserRouter([
             <MyCart />
           </PrivateRoute>
         ),
+        loader: () => fetch("http://localhost:5000/cart")
       },
       {
         path: "/login",
