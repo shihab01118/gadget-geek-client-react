@@ -5,7 +5,7 @@ const Brand = ({ brand }) => {
   const { brand_name, image } = brand || {};
   return (
     <div>
-      <Link to={`/brand/${brand_name}`}>
+      <Link to={`/products/${brand_name}`}>
         <div className="rounded-lg shadow-xl">
           <div className="w-40 h-40 flex justify-center items-center p-3">
           <img src={image} alt={brand_name} className="" />
