@@ -1,25 +1,42 @@
-const DisplayProduct = () => {
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+const DisplayProduct = ({ product }) => {
+  const { name, brand, type, price, rating, img, _id } = product || {};
   return (
-    <div
-      href="#"
-      className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl"
-    >
+    <div className="flex flex-col p-5 md:p-0 md:py-4 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
       <img
-        className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-        src="/docs/images/blog/image-4.jpg"
-        alt=""
+        className="object-cover rounded-t-lg h-[180px] md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+        src={img}
+        alt={name}
       ></img>
-      <div className="flex flex-col justify-between p-4 leading-normal">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Noteworthy technology acquisitions 2021
+      <div className="w-full mt-4 md:mt-0">
+        <p className="font-sm font-semibold">{brand}</p>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+          {name}
         </h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
-        </p>
+        <div className="font-medium space-y-1 text-gray-500">
+          <p>Type: {type}</p>
+          <p>Price: {price}</p>
+          <p>Rating: {rating}</p>
+        </div>
+        <div className="mt-3">
+          <button className="btn btn-sm mr-3 bg-[#3C393B] text-white font-semibold capitalize">
+            Update
+          </button>
+          <Link>
+            <button className="btn btn-sm bg-[#ffb300] text-white font-semibold capitalize">
+              Details
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
+};
+
+DisplayProduct.propTypes = {
+  product: PropTypes.object,
 };
 
 export default DisplayProduct;
