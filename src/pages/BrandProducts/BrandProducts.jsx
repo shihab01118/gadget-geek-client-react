@@ -2,10 +2,6 @@ import { useLoaderData } from "react-router-dom";
 import DisplayProduct from "./DisplayProduct";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
   Autoplay,
 } from "swiper/modules";
 
@@ -20,7 +16,7 @@ const BrandProducts = () => {
   return (
     <div className="">
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        modules={[ Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         autoplay
