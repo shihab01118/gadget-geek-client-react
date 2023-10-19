@@ -18,14 +18,14 @@ const Register = () => {
     const password = form.password.value;
 
     // password validation
-    // if (
-    //     !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{6,}$/.test(password)
-    //   ) {
-    //     toast.error(
-    //       "Password must contain 6 characters, one capital letter and a special character."
-    //     );
-    //     return;
-    //   }
+    if (
+        !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{6,}$/.test(password)
+      ) {
+        toast.error(
+          "Password must contain 6 characters, one capital letter and a special character."
+        );
+        return;
+      }
 
     //   create a User
     createUser(email, password).then((result) => {
