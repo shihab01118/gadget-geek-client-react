@@ -1,9 +1,27 @@
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
   const product = useLoaderData();
   const { name, brand, type, price, img, rating, description } = product || {};
 
+  const handleAddToCart = () => {
+    const cartProduct = {name, img, price};
+    fetch("http://localhost:5000/cart", {
+        method: "POST", 
+        headers: {
+            "content-type": "application/json",
+        },
+        body: JSON.stringify(cartProduct)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if(data.insertedId) {
+            toast.success("Added To Cart!")
+        }
+    })
+  }
   
   return (
     <div className="card card-compact max-w-xl mx-8 md:mx-16 lg:mx-auto bg-base-100 my-6 md:my-10 shadow-xl">
@@ -38,7 +56,7 @@ const ProductDetails = () => {
           <span className="font-medium text-gray-500">{description}</span>
         </p>
         <div className="card-actions justify-end">
-          <button className="btn bg-[#ffb300] text-white capitalize">
+          <button onClick={handleAddToCart} className="btn bg-[#ffb300] text-white capitalize">
             Add To Cart
           </button>
         </div>

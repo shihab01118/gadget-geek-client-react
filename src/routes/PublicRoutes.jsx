@@ -10,46 +10,59 @@ import PrivateRoute from "./PrivateRoute";
 import BrandProducts from "../pages/BrandProducts/BrandProducts";
 import ProductDetails from "../pages/BrandProducts/ProductDetails";
 
-
 const PublicRoutes = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: "/",
-        element: <Root />,
-        errorElement: <ErrorPage />, 
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-                loader: () => fetch("/brands.json")
-            },
-            {
-                path: "/products/:brand",
-                element: <BrandProducts />,
-                loader: ({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
-            },
-            {
-                path: "/product/:id",
-                element: <ProductDetails />,
-                loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
-            },
-            {
-                path: "/add_product",
-                element: <PrivateRoute><AddProduct /></PrivateRoute>
-            },
-            {
-                path: "/my_cart",
-                element: <PrivateRoute><MyCart /></PrivateRoute>
-            },
-            {
-                path: "/login",
-                element: <Login />
-            },
-            {
-                path: "/register",
-                element: <Register />
-            },
-        ]
-    }
-])
+        element: <Home />,
+        loader: () => fetch("/brands.json"),
+      },
+      {
+        path: "/products/:brand",
+        element: <BrandProducts />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.brand}`),
+      },
+      {
+        path: "/product/:id",
+        element: (
+          <PrivateRoute>
+            <ProductDetails />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
+      },
+      {
+        path: "/add_product",
+        element: (
+          <PrivateRoute>
+            <AddProduct />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my_cart",
+        element: (
+          <PrivateRoute>
+            <MyCart />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ],
+  },
+]);
 
 export default PublicRoutes;
