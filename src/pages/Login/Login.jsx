@@ -47,7 +47,7 @@ const Login = () => {
 
   return (
     <div
-      className="flex justify-center px-8 py-10 lg:py-16 bg-cover bg-center min-h-screen"
+      className="flex justify-center px-8 py-10 lg:py-16 bg-cover bg-center max-h-screen"
       style={{
         backgroundImage:
           "url(https://preview.colorlib.com/theme/wed/assets/img/gallery/section_bg1.png.webp)",

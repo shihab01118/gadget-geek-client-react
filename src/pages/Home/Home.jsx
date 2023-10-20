@@ -5,6 +5,8 @@ import NewGaming from "../../components/NewGaming/NewGaming";
 import { useEffect, useState } from "react";
 import TopProduct from "../../components/TopProduct/TopProduct";
 import Product from "../../components/Product/Product";
+import AdOne from "../../components/AdOne/AdOne";
+import AdTwo from "../../components/AdTwo/AdTwo";
 
 const Home = () => {
   const [topProducts, setTopProducts] = useState([]);
@@ -36,7 +38,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-
+      <AdOne />
       <div className="my-16 lg:my-24 bg-[#f7f6f1] py-12 lg:py-20">
         <div className=" lg:max-w-6xl mx-8 md:mx-16 lg:mx-auto">
           <h2 className="text-2xl leading-8 lg:text-3xl text-center mb-10 font-bold text-[#0b0b0b]">
@@ -60,6 +62,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+        <AdTwo></AdTwo>
     </div>
   );
 };
