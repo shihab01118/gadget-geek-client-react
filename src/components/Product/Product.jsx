@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 const Product = ({product}) => {
     const { name, image, price } = product || {};
   return (
-    <div className="card bg-white shadow-xl">
+    <div className="card bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
         <img src={image} alt={name} className="rounded-xl w-[80%]" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title text-[#0b0b0b]">{name}</h2>
+        <h2 className="card-title">{name}</h2>
         <div className="rating">
           <input
             type="radio"

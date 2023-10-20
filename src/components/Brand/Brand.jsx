@@ -6,11 +6,11 @@ const Brand = ({ brand }) => {
   return (
     <div>
       <Link to={`/products/${brand_name}`}>
-        <div className="rounded-lg shadow-xl">
-          <div className="w-40 h-40 flex justify-center items-center p-3">
-          <img src={image} alt={brand_name} className="" />
+        <div className="card rounded-lg shadow-xl bg-base-100 dark:bg-gray-100">
+          <div className="h-40 flex items-center justify-center p-5">
+          <img src={image} alt={brand_name} className="block mx-auto" />
           </div>
-          <h3 className="text-center border-t py-3 md:text-lg font-bold text-[#0b0b0b] hover:text-[#ffb300]">
+          <h3 className="text-center border-t py-3 md:text-lg font-bold hover:text-[#ffb300]">
             {brand_name}
           </h3>
         </div>

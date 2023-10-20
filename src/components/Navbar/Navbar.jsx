@@ -111,7 +111,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <div>
           {user && (
-            <p className="text-gray-700 hidden md:block">{user.displayName}</p>
+            <p className=" hidden md:block">{user.displayName}</p>
           )}
         </div>
         <label tabIndex={0} className="avatar mx-2">
@@ -136,7 +136,7 @@ const Navbar = () => {
         <label className="swap swap-rotate ml-3">
           <input type="checkbox" onChange={handleToggle} />
           <svg
-            className="swap-on fill-current w-7 h-7"
+            className="swap-on fill-current w-7 h-7 text-[#ffb300]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >

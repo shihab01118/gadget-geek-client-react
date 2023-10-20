@@ -27,10 +27,10 @@ const Home = () => {
     <div>
       <Banner />
       <div className="lg:max-w-6xl mx-8 md:mx-16 lg:mx-auto my-16 lg:my-24">
-        <h2 className="text-2xl leading-8 lg:text-3xl font-bold text-[#0b0b0b] mb-10 w-fit">
+        <h2 className="text-2xl leading-8 lg:text-3xl font-bold mb-10 w-fit">
           Top <span className="text-[#ffb300]">Brands</span>
         </h2>
-        <div className="flex flex-wrap gap-8 lg:gap-0 justify-between">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {brands?.map((brand) => (
             <Brand key={brand.id} brand={brand}></Brand>
           ))}
