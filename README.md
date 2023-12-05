@@ -1,4 +1,4 @@
-# Features of Our EVENTA Website
+# Features of Gadget Geek Website
 ## 1. Platform: 
 - [x] It is an E-Commerce website. Mainly it is based on gadget type products where users can buy their desired products.
 ## 2. Best Pricing:
