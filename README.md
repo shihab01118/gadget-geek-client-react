@@ -25,5 +25,4 @@ This repository contains the codebase for an E-commerce website developed using 
 
 Check out the live deployment of this application: [Gadget Geek](https://gadget-geek.web.app)
 
-
     
