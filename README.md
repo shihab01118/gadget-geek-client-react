@@ -1,29 +1,67 @@
-# E-commerce Web Application [Gadget Geek]
+# E-Commerce Site [Gadget Geek]
 
-This repository contains the codebase for an E-commerce website developed using HTML, CSS, JavaScript, React for the frontend, and Express.js with MongoDB for backend services.
+## Project Description
+
+This project is a full-stack E-Commerce web application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides users with functionalities to browse and purchase various products, manage their cart, and utilize authentication for secure login and registration.
+
+### Preview Link
+
+[Live Demo](<https://gadget-geek.web.app>)
 
 ## Features
 
-- **User Authentication**: Implements authentication functionalities using Firebase for email and password-based authentication. Additionally supports social logins (e.g., Google, Facebook, GitHub) for user convenience.
-- **Backend Implementation**: Utilizes Express.js to handle RESTful API endpoints, integrates MongoDB for database management, and implements CRUD operations for products and user data.
-- **Navigation and Layout**: Offers a responsive UI/UX design with a navbar containing links to essential pages like Home, Add Product, My Cart, and Login. Displays a 404 Not Found page for invalid routes.
-- **Homepage**: Showcases a visually appealing layout with banners, featured products, and multiple brand sections, allowing users to navigate to specific brand pages.
-- **Add Product Page**: Provides a user-friendly form allowing seamless addition of new products with details such as image upload, product name, brand, type, price, description, and rating.
-- **Brand Pages**: Dynamically generates brand-specific product pages displaying available products, accompanied by a slider featuring brand advertisements.
-- **Product Details Page**: Renders detailed information about individual products, enabling users to add items to their cart directly from this page.
-- **Cart Management**: Allows users to manage their shopping cart, view added items, and remove products they no longer wish to purchase.
-- **Product Update Page**: Offers an interface to modify and update product details, ensuring a smooth editing process.
-- **User Profile and Logout**: Displays user profile information on the navbar and provides a secure logout mechanism.
+- **User Authentication:**
+  - Users can register and log in with email and password.
+  - Additional login options available via social media accounts (e.g., Google, GitHub, etc.).
+  - Error handling for incorrect login credentials.
 
-## Technologies Used
+- **Home Page:**
+  - Navbar with website logo and user-related links.
+  - Sections including a banner, brand information, and additional sections.
+  - Dark/light theme toggle functionality for enhanced user experience.
 
-- **Frontend**: HTML, CSS, JavaScript, React.js, React Router
-- **Backend**: Express.js, MongoDB
-- **Authentication**: Firebase Authentication
+- **Add Product:**
+  - Protected route for adding new products to the database.
+  - Form includes fields for image, name, brand, type, price, short description, and rating.
 
-## Live Link
+- **Brand Pages:**
+  - Clicking on a brand displays related products.
+  - Slider showcasing advertisements and multiple product listings per brand.
+  - Relevant messaging for brands with no available products.
 
-Check out the live deployment of this application: [Gadget Geek](https://gadget-geek.web.app)
+- **Product Details:**
+  - Detailed product information displayed on a protected route.
+  - Add to Cart functionality storing product info in the database with success messages.
 
+- **My Cart Page:**
+  - Protected route displaying user-added products.
+  - Option to delete products from the cart.
 
-    
+- **Update Product:**
+  - Protected route allowing users to update product information via a form.
+
+- **404 Page:**
+  - Customized page for handling not found errors.
+
+## Bonus Features
+
+- Responsiveness: Optimized for various devices (desktop, mobile).
+- Dark/Light Theme Toggle: Implemented optional theme toggling for the home page.
+
+## Getting Started
+
+1. Clone the repository.
+2. Install dependencies using `npm install` in both client and server directories.
+3. Run the development server using `npm start`.
+4. Access the application locally in your browser.
+
+## Tech Stack
+
+- Frontend: React.js, HTML/CSS, JavaScript
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Authentication: Firebase
+
+## Contributions
+
+Contributions to this project are welcome! If you have any suggestions or find issues, feel free to raise them in the repository's issue section or make a pull request.
